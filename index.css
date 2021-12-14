@@ -1,0 +1,248 @@
+* {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  box-sizing: border-box;
+}
+:root {
+  --size-bezel: 0.5rem;
+  --size-radius: 4px;
+}
+
+::placeholder {
+  color:  #cad0d2;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:  #cad0d2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color:  #cad0d2;
+}
+
+hr {
+  border: 1px solid #eff1f1;
+
+}
+
+.hr-2{
+    margin:23px 0;
+}
+
+p{
+color: #cad0d2;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.label-input {
+  position: relative;
+}
+.restoran-name-span,.restoran-number-span {
+  position: absolute;
+  left: 7px;
+  top: -23px;
+  padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * 0.5);
+  margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 0.5);
+  color: #b0b6bc;
+  background: #b0b6bc;
+  white-space: nowrap;
+  background:white;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.restoran-name,.restoran-number {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid #b0b6bc;
+  padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+  background: transparent;
+  border-radius: var(--size-radius);
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.brand-group-contents{
+  margin-top: 24px;
+  color: #b0b6bc;
+}
+
+#content1 {
+  display: none;
+}
+#content1 input {
+  width: 296px;
+  height: 48px;
+  left: 416px;
+  top: 474px;
+  background: #ffffff;
+  border: 1px solid #cad0d2;
+  border-radius: 8px;
+}
+
+#content1 input:not(:last-child) {
+  margin-right: 10px;
+}
+
+#content2 {
+  display: none;
+}
+
+#content2 input {
+  width: 296px;
+  height: 48px;
+  left: 416px;
+  top: 474px;
+  background: #ffffff;
+  border: 1px solid #cad0d2;
+  border-radius: 8px;
+}
+
+#content2 input:first-child {
+  margin-right: 10px;
+}
+#content2 input:last-child {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  height: 48px;
+}
+
+#content3 {
+  display: none;
+}
+#content3 input {
+  width: 296px;
+  height: 48px;
+  left: 416px;
+  top: 474px;
+  background: #ffffff;
+  border: 1px solid #cad0d2;
+  border-radius: 8px;
+}
+
+#content3 input:nth-child(1),
+#content3 input:nth-child(2) {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  height: 48px;
+}
+#content3 input:nth-child(3),
+#content3 input:nth-child(4) {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d3dbde;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 192px;
+  height: 48px;
+}
+
+.brand-group {
+  display: flex;
+  
+}
+
+.brand-group .brand:not(:last-child) {
+  margin-right: 10px;
+}
+
+.brand {
+  height: 48px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #b0b6bc;
+  border: 1px solid #b0b6bc;
+  border-radius: 8px;
+}
+
+.brand::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 2px solid #cad0d2;
+  border-radius: 50%;
+  margin: 12px;
+}
+
+input[type="radio"]:checked + .brand {
+  border: 1px solid #56bce2;
+}
+
+input[type="radio"]:checked + .brand::before {
+  border: 1px solid #56bce2;
+}
+
+input[type="radio"]:checked + .brand::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 19px;
+  top: 17px;
+  border-radius: 50%;
+  background: #56bce2;
+}
+
+button {
+  position: absolute;
+  width: 608px;
+  height: 48px;
+  left: 390px;
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1px solid #ff937d;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff937d;
+}

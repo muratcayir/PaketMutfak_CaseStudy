@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label class="label-input">
+          <input class="restoran-name" type="text" placeholder=" Bibuçuk" />
+          <span class="restoran-name-span">Restoran Adı</span>
+        </label>
+        <br />
+        <label class="label-input">
+          <input
+            class="restoran-number"
+            type="text"
+            placeholder=" +90 (---) --- -- --"
+          />
+          <span class="restoran-number-span">Restoran Telefon Numarası</span>
+        </label><br/>
+        <hr />
+        <p>
+          Lütfen konfigurasyonu yapmak istediğiniz restoran yönetim panelini
+          seçiniz.
+        </p>
+
+        <div class="brand-list">
+          <div class="brand-group">
+            <input
+              type="radio"
+              id="getir"
+              name="toggle"
+              value="getir"
+              onclick="handleClick(this)"
+            />
+            <label class="brand" for="getir"> Getir </label>
+
+            <input
+              type="radio"
+              id="trendyol"
+              name="toggle"
+              value="trendyol"
+              onclick="handleClick(this)"
+            />
+            <label class="brand" for="trendyol"> Trendyol </label>
+
+            <input
+              type="radio"
+              id="yemeksepeti"
+              name="toggle"
+              value="yemeksepeti"
+              onclick="handleClick(this)"
+            />
+            <label class="brand" for="yemeksepeti"> Yemeksepeti </label>
+          </div>
+        </div>
+
+        <hr class="hr-2" />
+
+        <div class="brand-group-contents">
+          <span id="content1">
+            <input type="text" placeholder="App Secret Key" />
+            <input type="text" placeholder="Restaurant Secret Key" />
+          </span>
+          <span id="content2">
+            <input type="text" placeholder="Api Key" />
+            <input type="text" placeholder="App Secret Key" />
+            <input type="text" placeholder="Suplier Id" />
+          </span>
+          <span id="content3">
+            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Password" />
+            <input type="text" placeholder="Catalog Name" />
+            <input type="text" placeholder="Catalog Id" />
+          </span>
+        </div>
+
+        <button>
+          <span>Restoran Ekle</span>
+        </button>
+        <br />
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
