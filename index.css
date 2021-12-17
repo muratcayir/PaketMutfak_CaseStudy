@@ -8,45 +8,118 @@
   text-align: left;
   box-sizing: border-box;
 }
+
+:root {
+  --size-bezel: 0.5rem;
+  --size-radius: 4px;
+}
+
+body {
+  min-width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 1px solid #eff1f1;
+}
+
+.hr-2 {
+  margin: 23px 0;
+}
+
+p {
+  color: #cad0d2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+::placeholder {
+  color: #cad0d2;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #cad0d2;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #cad0d2;
+}
+
+.container {
+  height: 566px;
+  width: 1280px;
+  margin: 76px 80px 382px 80px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+}
+
+.row {
+  height: 518px;
+  margin-left: 336px;
+  margin-right: 336px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+* {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  box-sizing: border-box;
+}
 :root {
   --size-bezel: 0.5rem;
   --size-radius: 4px;
 }
 
 ::placeholder {
-  color:  #cad0d2;
+  color: #cad0d2;
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color:  #cad0d2;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #cad0d2;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
- color:  #cad0d2;
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #cad0d2;
 }
 
 hr {
   border: 1px solid #eff1f1;
-
 }
 
-.hr-2{
-    margin:23px 0;
+.hr-2 {
+  margin: 23px 0;
 }
 
-p{
-color: #cad0d2;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-
+p {
+  color: #cad0d2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,10 +130,11 @@ input[type="radio"] {
   display: none;
 }
 
-.label-input {
+.restoran-info-label {
   position: relative;
 }
-.restoran-name-span,.restoran-number-span {
+.restoran-name-span,
+.restoran-number-span {
   position: absolute;
   left: 7px;
   top: -23px;
@@ -69,7 +143,7 @@ input[type="radio"] {
   color: #b0b6bc;
   background: #b0b6bc;
   white-space: nowrap;
-  background:white;
+  background: white;
   font-family: Open Sans;
   font-size: 12px;
   font-style: normal;
@@ -78,7 +152,8 @@ input[type="radio"] {
   letter-spacing: 0em;
   text-align: left;
 }
-.restoran-name,.restoran-number {
+.restoran-name,
+.restoran-number {
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -93,10 +168,9 @@ input[type="radio"] {
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-
 }
 
-.brand-group-contents{
+.restoran-brands-contents {
   margin-top: 24px;
   color: #b0b6bc;
 }
@@ -105,10 +179,8 @@ input[type="radio"] {
   display: none;
 }
 #content1 input {
-  width: 296px;
+  width: 302px;
   height: 48px;
-  left: 416px;
-  top: 474px;
   background: #ffffff;
   border: 1px solid #cad0d2;
   border-radius: 8px;
@@ -123,7 +195,7 @@ input[type="radio"] {
 }
 
 #content2 input {
-  width: 296px;
+  width: 303px;
   height: 48px;
   left: 416px;
   top: 474px;
@@ -146,7 +218,7 @@ input[type="radio"] {
   display: none;
 }
 #content3 input {
-  width: 296px;
+  width: 303px;
   height: 48px;
   left: 416px;
   top: 474px;
@@ -162,29 +234,20 @@ input[type="radio"] {
   margin-top: 20px;
   height: 48px;
 }
-#content3 input:nth-child(3),
+#content3 input:nth-child(3) {
+  margin-top: 20px;
+}
+
 #content3 input:nth-child(4) {
   margin-top: 20px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.checkbox-wrap {
+.restoran-brands {
   display: flex;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid #d3dbde;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 192px;
-  height: 48px;
 }
 
-.brand-group {
-  display: flex;
-  
-}
-
-.brand-group .brand:not(:last-child) {
+.restoran-brands .brand:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -228,21 +291,46 @@ input[type="radio"]:checked + .brand::after {
   background: #56bce2;
 }
 
-button {
-  position: absolute;
-  width: 608px;
-  height: 48px;
-  left: 390px;
-  margin-top: 10px;
-  background: #ffffff;
-  border: 1px solid #ff937d;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
-button span {
+input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 620px;
+  height: 48px;
+  left: 390px;
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #ff937d;
   color: #ff937d;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+
+.inp-cls {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #56bce2;
+  border: 1px solid #56bce2;
+}
+
+.green {
+  color: white !important;
+  background-color: #85e3cd !important;
+  border: 1px solid #85e3cd !important;
+}
+
+.red {
+  color: white !important;
+  background-color: #f76f52 !important;
 }
